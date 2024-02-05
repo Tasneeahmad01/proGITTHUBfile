@@ -1,0 +1,18 @@
+body{
+    background-color: #a8bd52;
+}
+.navbar{
+    background-color: white;
+    height: 5rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+.fa-compass{
+    color: #fe424d;
+}
+/* .ern{
+    border: 2px solid orange;
+} */
+.me-2{border: 2px solid orange;
+}
