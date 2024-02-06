@@ -3,19 +3,24 @@
   <div class="col-8 offset-2">
     <h3>Create a New Listing,,,</h3>
     <form method="POST" action="/listings">
-      <div class="">
-      <input name="listing[title]" placeholder="enter title" type="text" />
-      <br /><br />
-      <textarea
-        name="listing[description]"
-        placeholder="enter description"
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+      <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control" />
+      </div>
+       <div class="mb-3">
+        <label for="description"class="form-label">Description</label>
+        <textarea
+        name="listing[description]" class="form-control"
       ></textarea>
-      <br /><br />
+       </div>
+    <div class="mb-3">
+    <label for="image" class="form-label">Image Link</label>
       <input
         name="listing[image]"
         placeholder="enter image URL/Link"
         type="text"
       />
+      </div>
       <br /><br />
       <input name="listing[price]" placeholder="enter price" type="number" />
       <br /><br />
