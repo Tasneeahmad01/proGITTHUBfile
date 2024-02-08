@@ -51,18 +51,23 @@ app.get("/listings/:id",async(req,res)=>{
 });
 
 // CREATE ROUTE//
-app.post("/listings",async(req,res)=>{
-const newListing = (req.body.listing);
-await newListing;
+app.post("/listings",async(req,res,next)=>{
+try{
+  const newListing = (req.body.listing);
+await newListing.save();
 res.redirect("/listings");
+}catch(err){
+  next(err)
+}
 });
+
 
 // EDIT ROUTE//
 app.get("/listings/:id/edit",async(req,res)=>{
     let{ id } = req.params;
     const listing = await Listing.findById(id);
     res.render("listings/edit.ejs",{listing});
-});
+}); 
 
 //UPDATE ROUTE//
 app.post("/listings/:id", async (req, res) => {
@@ -97,6 +102,10 @@ app.delete("/listings/:id", async (req, res) => {
 // console.log("sample was saved");
 // res.send("Successful");
 // });
+
+app.use((err,req,res,next)=>{
+  res.send("Something went wrong");
+});
 app.listen(port,()=>{
 console.log("server is listening to port 3000");
 });

@@ -5,15 +5,20 @@
     <form method="POST" action="/listings" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-      <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control" 
+      <input name="listing[title]" placeholder="Add a catchy title" 
+      type="text" 
+      class="form-control"
       required
       />
+      <div class="valid-feedback">Title looks goods</div>
       </div>
        <div class="mb-3">
         <label for="description"class="form-label">Description</label>
         <textarea
         name="listing[description]" class="form-control"
       ></textarea>
+      <div class="valid-feedback">Description looks goods</div>
+
        </div>
     <div class="mb-3">
     <label for="image" class="form-label">Image Link</label>
@@ -24,6 +29,7 @@
         class="form-control"
         required
       />
+      <div class="valid-feedback">Image was looks goods</div>
       </div>
      
       
@@ -34,7 +40,9 @@
             name="listing[price]"
             placeholder="1299"
             type="text"
+            required
           />
+          <div class="valid-feedback">Title looks goods</div>
         
           </div>
           <div class="mb-3">
@@ -47,7 +55,10 @@
                 class="form-control"
                 required
               />
-              
+              <div class="valid-feedback">Travele Country name
+                
+              </div>
+
               
             </div>
       <div class="mb-3">
@@ -61,6 +72,6 @@
       />
       </div>
       <br /><br />
-      <button>Add</button>
+      <button class="btn  add-btn mt-3">Add</button>
     </form>
   
