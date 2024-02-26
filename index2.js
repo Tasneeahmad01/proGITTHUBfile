@@ -11,5 +11,6 @@ let b = 65;
 let sum =  (" sum is : " ,a+b);
 let c = 32;
 let d = 65;
+
 console.log(c++);
 console.log(++d);
